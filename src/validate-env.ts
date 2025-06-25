@@ -16,11 +16,11 @@ export function validateEnvironmentVariables() {
   }
 
   if (!useBedrock && !useVertex) {
-    if (!anthropicApiKey) {
-      errors.push(
-        "ANTHROPIC_API_KEY is required when using direct Anthropic API.",
-      );
-    }
+    // if (!anthropicApiKey) {
+    //   errors.push(
+    //     "ANTHROPIC_API_KEY is required when using direct Anthropic API.",
+    //   );
+    // }
   } else if (useBedrock) {
     const requiredBedrockVars = {
       AWS_REGION: process.env.AWS_REGION,
